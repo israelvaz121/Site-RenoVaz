@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Renovaz Construtora</title>
+    <link rel="stylesheet" href="styletrabalhos.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #trabalhos {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul id="rolado">
+            <li><a href="index.html">Sobre nós</a></li>
+            <li><a href="#trabalhos">Trabalhos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const ul = document.getElementById('rolado');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                ul.classList.add('rolado');
+            } else {
+                ul.classList.remove('rolado');
+            }
+        });
+    </script>
+
+    <div class="container">
+        <h1 class="flutuante" >Trabalhos Completos:</h1>
+    </div>
+
+    <!-- BLOCO 1 - Revestimento de Muro -->
+    <div class="conteudo flutuante">
+        <img src="Capturar.PNG" class="quadrado" alt="Revestimento de Muro">
+        <div class="descricao">
+            <h2 class="flutuante" id="trabalhos">Revestimento de Muro:</h2>
+            <p>
+                O muro foi revestido com cerâmica tipo tijolinho, conferindo um acabamento estético moderno e rústico ao mesmo tempo.
+                As áreas centrais foram complementadas com painéis cerâmicos lisos em tom claro, criando um contraste elegante e valorizando a fachada.
+                <br><br>
+                O padrão de assentamento das peças foi realizado com atenção à simetria, alinhamento e espaçamento, garantindo uniformidade visual.
+                Além disso, os recortes foram bem ajustados aos elementos construtivos, como o portão e a caixa de medição, evidenciando um trabalho técnico preciso.
+                <br><br>
+                Esse tipo de acabamento, além de valorizar o imóvel, proporciona durabilidade, resistência à umidade e facilidade de manutenção, sendo uma excelente escolha para áreas externas.
+            </p>
+        </div>
+    </div>
+
+    <!-- BLOCO 2 - Escada Metálica -->
+    <div class="conteudo reverso flutuante">
+        <div class="descricao">
+            <h2 class="flutuante">Escada em Material Metálico:</h2>
+            <p>
+                <strong>Escada metálica</strong> com visual moderno e estrutura robusta, ideal para espaços industriais e arquitetônicos.
+                O design limpo permite uma integração harmoniosa com diferentes estilos.
+                É a escolha certa para quem busca resistência com estética funcional.
+            </p>
+            <p>
+                Fabricada com material de alta durabilidade, oferece <strong>baixa manutenção</strong> e excelente desempenho.
+                Os degraus garantem <strong>segurança e firmeza</strong> no uso diário.
+                A base de concreto reforça a <strong>estabilidade da estrutura</strong>, permitindo maior confiabilidade.
+                Perfeita para aplicações técnicas ou decorativas que valorizam o acabamento metálico.
+            </p>
+            <p>
+                Combina <strong>eficiência e elegância</strong> em uma solução versátil.
+                Uma peça que une função e estilo com maestria.
+            </p>
+        </div>
+        <img src="trabalho.PNG" alt="Escada Metálica" class="quadrado">
+    </div>
+
+    <!-- BLOCO 3 - Estrutura Metálica -->
+    <div class="conteudo flutuante">
+        <img src="trab2.png" class="quadrado" alt="Estrutura Metálica">
+        <div class="descricao">
+            <h2 class="flutuante">Estrutura Metálica:</h2>
+            <p>
+                A estrutura metálica apresenta vigas e travamentos bem distribuídos, formando um conjunto robusto e simétrico.
+                O uso de perfis leves e resistentes a torna ideal para grandes coberturas.
+            </p>
+            <p>
+                Os elementos diagonais garantem estabilidade, evitando torções e distribuindo o peso de forma eficiente.
+                Sua altura favorece ventilação e luminosidade, comuns em espaços como galpões e quadras.
+            </p>
+            <p>
+                Mesmo inacabada, a estrutura cumpre seu papel com eficiência, sustentando grandes vãos com poucos apoios.
+                O aço proporciona leveza visual, alta durabilidade e resistência mecânica.
+            </p>
+        </div>
+    </div>
+
+    <!-- BLOCO 4 - Cobertura Metálica -->
+    <div class="conteudo reverso flutuante">
+        <div class="descricao">
+            <h2 class="flutuante">Cobertura Metálica:</h2>
+            <p>
+                A cobertura metálica com telhas galvanizadas trapezoidais oferece proteção eficiente contra
+                intempéries e boa estética, graças à estrutura metálica fixada nas alvenarias.
+            </p>
+            <p>
+                As vigas principais e secundárias são distribuídas regularmente, com ligações reforçadas por
+                solda e concreto, garantindo resistência, leveza e durabilidade à estrutura.
+            </p>
+            <p>
+                Ideal para áreas residenciais ou comerciais, essa solução permite montagem rápida e eficiente,
+                resultando em uma cobertura robusta, funcional e com acabamento limpo.
+            </p>
+            
+        </div>
+    <img src="trab3.PNG" class="quadrado" alt="Cobertura Metálica">
+    </div>
+
+    <div class="conteudo flutuante">
+        <img src="trab6.png" class="quadrado" alt=" casa">
+        <div class="descricao">
+            <h2 class="flutuante">Residência em Condomínio:</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad libero, asperiores inventore temporibus magni explicabo voluptate id soluta facilis cum sit odit ut exercitationem amet harum labore natus aliquid accusamus!
+                
+            </p>
+    </div>
+    </div>
+
+    <!-- barra em baixo -->
+    <footer class="footer">
+        Copyright 2025. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        const elementos = document.querySelectorAll('.flutuante');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aparecer');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elementos.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Renovaz Construtora</title>
+    <link rel="stylesheet" href="style.css">
+        <style>
+        html { 
+            scroll-behavior: smooth; 
+        } 
+        #Trabalho { 
+            scroll-margin-top: 100px; 
+        }
+    </style>
+</head>
+
+<body style="height: auto;">
+
+    <nav>
+        <ul id="topo">
+            <li><a href="#inicio">Sobre nós</a></li>
+            <li><a href="trabalho.html">Trabalhos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+<script>
+    const ul = document.getElementById('topo');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        ul.classList.add('rolado');
+    } else {
+        ul.classList.remove('rolado');
+    }
+    });
+</script>
+
+    <div class="container">
+        <h1 class="flutuante">Renovaz Construtora</h1>
+        
+        <div>
+            <img class="imge flutuante" src="./fotorenovaz.png" alt="Imagem da Renovaz Construtora" id="inicio">
+            <h2 class="flutuante" >Quem Somos?</h2>
+            <p class="container">
+                Somos <strong>especialistas em construção civil</strong> com foco em qualidade, compromisso e excelência. Atuamos em:
+                <br>🔹 Obras Industriais
+                <br>🔹 Projetos Comerciais
+                <br>🔹 Construção de Galpões
+                <br>🔹 Residências
+                <br>🔹 Reformas em Geral
+            </p>
+        </div>
+
+        <p>
+            Experimente a diferença de trabalhar com quem entende do assunto e valoriza as suas ideias.<br>
+            Entre em contato conosco e <strong>dê</strong> o primeiro passo para a realização do seu projeto!
+        </p>
+        </div>
+        
+    <div class="container">
+        <h2 class="flutuante">Tempo de Experiência</h2>
+        <p>
+            Desde 2010, transformando projetos em realidade e ajudando muitas famílias a conquistarem o seu lar dos sonhos.
+        </p>    
+    </div>
+
+    <div class="container">
+        <h2 class="flutuante">Especialidades</h2>
+        <p>
+            Temos mão de obra especializada em:
+            <br>🔹 Carpinteiro de Forma / Estrutura / Acabamento  
+            <br>🔹 Pedreiro – Assentamento de blocos, reboco, contrapiso, alvenaria estrutural
+            <br>🔹 Armador – Montagem de ferragens para concreto armado
+            <br>🔹 Eletricista Predial / Industrial – Instalações e redes elétricas
+            <br>🔹 Encanador / Hidráulico – Instalações de água, esgoto e gás
+            <br> Dentre outros...
+        </p>
+    </div>
+
+    <footer class="footer">
+        Copyright 2025. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        const elementos = document.querySelectorAll('.flutuante');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aparecer');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        elementos.forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+        const u = document.getElementById('topo');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50 ) {
+                ul.classList.add('transparent');
+            } else {
+                ul.classList.remove('transparent');
+            }
+        });
+    </script>
+
+</body>
+</html>

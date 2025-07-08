@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 60px 0;
+    min-height: 100vh;
+    color: rgb(198, 212, 255);
+    background: linear-gradient(to top right, rgb(6, 53, 155), rgb(0, 102, 218));
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.flutuante {
+    font-size: 3em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+.flutuantes {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.flutuante.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+.flutuantes.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+a {
+    color: rgb(182, 199, 255);
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 15px;
+    margin: 0;
+    background: linear-gradient(to right, #0841aa,rgb(10, 93, 218));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+ul.rolado {
+    background: rgba(44, 90, 170, 0.25); /* azul com transparência */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 15px;
+    margin: 0;
+}
+
+ul.rolado a {
+    mix-blend-mode: difference;
+    color: rgb(150, 225, 255);
+}
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    border: 5px solid rgb(4, 175, 255);
+}
+
+.imgm {
+    width: 170px;
+    height: 170px;
+    border-radius: 0%;
+}
+
+.imgem {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+}
+
+.imge {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to left, rgb(0, 53, 167), rgb(0, 71, 151));
+    color: rgb(182, 199, 255);
+    text-align: center;
+    padding: 0.1px;
+}
+
+
+/* Espaço para compensar o menu fixo ao rolar até uma âncora */
+#sobre-nos, #trabalho, #contato {
+    scroll-margin-top: 120px;
+}
+.flutuantes.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+.flutuantes {
+    font-size: 3em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.imagem {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+    height: auto;
+}

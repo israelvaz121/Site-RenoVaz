@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 60px 0; /* espaço superior e inferior por causa do menu e rodapé fixos */
+    min-height: 100vh;
+    color: rgb(198, 212, 255);
+    background: linear-gradient(to top right, rgb(0, 41, 131), rgb(0, 102, 218));
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Compensação para o menu fixo ao rolar até âncoras */
+#sobre-nos,
+#trabalho,
+#contato {
+    scroll-margin-top: 120px;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.lateral {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+/* Animação de entrada ao rolar */
+.flutuante {
+    font-size: 3em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.flutuante.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu fixo no topo */
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 15px;
+    margin: 0;
+    background: linear-gradient(to right, #0841aa,rgb(10, 93, 218));
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+ul.rolado {
+    background: rgba(44, 90, 170, 0.25); /* azul com transparência */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 15px;
+    margin: 0;
+}
+
+ul.rolado a {
+    mix-blend-mode: difference;
+    color: rgb(150, 225, 255);
+}
+
+
+/* Links do menu */
+a {
+    color: rgb(182, 199, 255);
+    text-decoration: none;
+}
+
+/* Imagem circular padrão */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    border: 5px solid rgb(4, 175, 255);
+}
+
+/* Logo ou imagem maior com borda azul e cantos arredondados */
+.imge {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid rgb(4, 175, 255);
+}
+
+/* Logo centralizada e pequena */
+.imagem {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+}
+
+/* Imagem quadrada com borda arredondada */
+.quadrado {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px !important;
+}
+
+/* Rodapé fixo */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to left, rgb(0, 53, 167), rgb(0, 71, 151));
+    color: rgb(182, 199, 255);
+    text-align: center;
+    padding: 0.1px;
+}
+
+/* Conteúdo com imagem à esquerda */
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.conteudo .quadrado {
+    flex-shrink: 0;
+}
+
+.conteudo .descricao {
+    flex: 1;
+    color: rgb(182, 199, 255);
+    font-size: 16px;
+}
+
+/* Inversão de layout com imagem à direita */
+.conteudoreverso {
+    flex-direction: row-reverse;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .conteudo,
+    .conteudoreverso {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .conteudo .quadrado {
+        margin: 20px 0;
+    }
+}
