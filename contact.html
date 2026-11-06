@@ -5,15 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contato - Renovaz Construtora</title>
-    <link rel="stylesheet" href="stylecontato.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-contact">
 
     <nav>
-        <ul id="rolado">
-            <li><a href="index.html">Sobre nós</a></li>
-            <li><a href="trabalho.html">Trabalhos</a></li>
-            <li><a href="contato.html">Contato</a></li>
+        <ul id="navbar">
+            <li><a href="about.html">Sobre nós</a></li>
+            <li><a href="works.html">Trabalhos</a></li>
+            <li><a href="contact.html">Contato</a></li>
         </ul>
     </nav>
 
@@ -51,32 +51,7 @@
         Copyright 2025. Todos os direitos reservados.
     </footer>
 
-    <script>
-        const ul = document.getElementById('rolado');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                ul.classList.add('rolado');
-            } else {
-                ul.classList.remove('rolado');
-            }
-        });
-
-        const elementos = document.querySelectorAll('.flutuante');
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('aparecer');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        elementos.forEach(el => observer.observe(el));
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>

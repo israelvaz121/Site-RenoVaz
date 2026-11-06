@@ -3,44 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <title>Renovaz Construtora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css">
-        <style>
-        html { 
-            scroll-behavior: smooth; 
-        } 
-        #Trabalho { 
-            scroll-margin-top: 100px; 
-        }
-    </style>
 </head>
 
-<body style="height: auto;">
+<body>
 
     <nav>
-        <ul id="topo">
+        <ul id="navbar">
             <li><a href="#inicio">Sobre nós</a></li>
-            <li><a href="trabalho.html">Trabalhos</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="works.html">Trabalhos</a></li>
+            <li><a href="contact.html">Contato</a></li>
         </ul>
     </nav>
 
-<script>
-    const ul = document.getElementById('topo');
-
-    window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        ul.classList.add('rolado');
-    } else {
-        ul.classList.remove('rolado');
-    }
-    });
-</script>
 
     <div class="container">
         <h1 class="flutuante">Renovaz Construtora</h1>
         
         <div>
-            <img class="imge flutuante" src="./fotorenovaz.png" alt="Imagem da Renovaz Construtora" id="inicio">
+            <img class="imge flutuante" src="./renovaz-photo.png" alt="Imagem da Renovaz Construtora" id="inicio">
             <h2 class="flutuante" >Quem Somos?</h2>
             <p class="container">
                 Somos <strong>especialistas em construção civil</strong> com foco em qualidade, compromisso e excelência. Atuamos em:
@@ -82,33 +64,7 @@
         Copyright 2025. Todos os direitos reservados.
     </footer>
 
-    <script>
-        const elementos = document.querySelectorAll('.flutuante');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('aparecer');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        elementos.forEach(el => observer.observe(el));
-    </script>
-
-    <script>
-        const u = document.getElementById('topo');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50 ) {
-                ul.classList.add('transparent');
-            } else {
-                ul.classList.remove('transparent');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
